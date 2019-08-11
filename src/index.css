@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.Info-Msg,
+.Success-Msg,
+.Warning-Msg,
+.Error-Msg {
+  margin: 10px 0;
+  padding: 15px 10px;
+  font-size: 13px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.Info-Msg {
+  color: #059;
+  background-color: #bef;
+  border-left: 3px solid rgb(91, 184, 214);
+}
+.Success-Msg {
+  color: #270;
+  background-color: #dff2bf;
+  border-left: 3px solid #689e0a;
+}
+.Warning-Msg {
+  color: #9f6000;
+  background-color: #feefb3;
+  border-left: 3px solid #b9970c;
+}
+.Error-Msg {
+  color: #d8000c;
+  background-color: #ffbaba;
+}

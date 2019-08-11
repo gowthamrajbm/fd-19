@@ -1,0 +1,90 @@
+.Input {
+  width: 100%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+}
+.ILabel {
+  display: block;
+  margin-bottom: 8px;
+  width: 100%;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.InputElement {
+  outline: none;
+  border: 0px solid #d2d2d2;
+  border-radius: 3px;
+  background: #fff;
+  font: inherit;
+  padding: 10px 10px;
+  display: block;
+  width: 100%;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  transition: 0.3s;
+  font-size: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.InputElement:focus {
+  outline: none;
+  box-shadow: inset 0px 0px 5px 1px #004b54;
+  background: #f8f8f8;
+  transition: 0.3s;
+}
+
+.InputElement:disabled {
+  outline: none;
+  box-shadow: 0px 0px 1px 0px #ddd;
+  background: #efefef;
+}
+
+.Invalid {
+  border: 1px solid red;
+  background-color: #fdcec8;
+}
+.react-time-picker__wrapper {
+  border: 0;
+}
+.TimeRange {
+  padding: 5px 0 !important;
+  font-size: 13px;
+  border: 0;
+  background: initial;
+  display: flex;
+  align-items: center;
+}
+.TimeRange span {
+  padding: 0 5px;
+}
+.TimeRange select {
+  padding: 5px;
+  border: 1px solid #c7c7c7;
+  border-radius: 3px;
+  background: #f8f8f8;
+  min-width: 100px;
+}
+/* Inline - Input variant */
+.Input.Inline {
+  display: flex;
+}
+.Input.Inline .ILabel {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.Input.Inline .InputElement {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 500px) {
+  .Input.Inline {
+    display: block;
+  }
+  .Input.Inline .InputElement {
+    justify-content: flex-start;
+  }
+}
