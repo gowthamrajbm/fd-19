@@ -8,11 +8,16 @@ import PrizeForm from "../../components/PrizeForm/PrizeForm";
 class HomePage extends React.Component {
   state = {
     page: 1,
-    prize: null
+    prize: null,
+    eid: null
   };
 
   setPage = (page, eid = null) => {
     this.setState({ page: page, eid: eid });
+  };
+
+  getEid = () => {
+    return this.state.eid;
   };
 
   won = prize => {
@@ -31,8 +36,7 @@ class HomePage extends React.Component {
         >
           <div className="Page1">
             <img
-              src="https://markit.anz.com/uploads/144a4930128bca0c8536347ebb94701c/logo/small-logo-eb6fb5f143638db1e2b8e68eec525356.png"
-              onClick={() => this.setState({ page: 4 })}
+              src="https://markit.anz.com/uploads/144a4930128bca0c8536347ebb94701c/logo/small-logo-eb6fb5f143638db1e2b8e68eec525356.png" alt="ANZ"
             />
             <h1>
               ANZ Finance Day
@@ -77,7 +81,7 @@ class HomePage extends React.Component {
           className={this.state.page === 4 ? "Home-Prize active" : "Home-Prize"}
         >
           <div className="Page4">
-            <PrizeForm eid={this.state.eid} won={this.won} lost={this.lost} />
+            <PrizeForm eid={this.getEid} won={this.won} lost={this.lost} />
           </div>
         </div>
         <div
@@ -98,12 +102,17 @@ class HomePage extends React.Component {
             this.state.page === 6 ? "Home-Prize-Fail active" : "Home-Prize-Fail"
           }
         >
-          <div className="Page6" />
+          <div className="Page6">
+
+            <h1>Empty Slot!!</h1>
+            <h3>Try Your Luck at</h3>
+            <h3>Next Stall</h3>
+          </div>
         </div>
       </div>
     );
   }
-}
+} 
 
 /**
  * Confetti particle class

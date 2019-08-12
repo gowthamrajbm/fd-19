@@ -8,8 +8,7 @@ class PrizeForm extends React.Component {
     submitted: false,
     draw1: "",
     draw2: "",
-    draw3: "",
-    eid: this.props.eid
+    draw3: ""
   };
 
   prizeSubmit = e => {
@@ -23,10 +22,13 @@ class PrizeForm extends React.Component {
           "&draw3=" +
           this.state.draw3 +
           "&eid=" +
-          this.state.eid
+          this.props.eid()
       )
       .then(res => {
-        this.props.won();
+        if(res.data.success)
+          this.props.won();
+        else 
+          this.props.lost();
       })
       .catch(err => {
         this.props.lost();
@@ -37,7 +39,7 @@ class PrizeForm extends React.Component {
     return (
       <div>
         {!this.state.submitted ? (
-          <div class="text-cont">
+          <div className="text-cont">
             <input
               type="text"
               onChange={e => this.setState({ draw1: e.target.value })}
@@ -52,15 +54,15 @@ class PrizeForm extends React.Component {
             />
           </div>
         ) : (
-          <div class="loader-wrapper loader-wrapper--9">
-            <div class="loader loader--9">
-              <div class="square">
+          <div className="loader-wrapper loader-wrapper--9">
+            <div className="loader loader--9">
+              <div className="square">
                 <b>{this.state.draw1}</b>
               </div>
-              <div class="square">
+              <div className="square">
                 <b>{this.state.draw2}</b>
               </div>
-              <div class="square">
+              <div className="square">
                 <b>{this.state.draw3}</b>
               </div>
             </div>

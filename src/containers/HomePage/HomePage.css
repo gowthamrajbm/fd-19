@@ -28,7 +28,11 @@
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   overflow: hidden;
   background: linear-gradient(0deg, rgba(0, 6, 10, 0.9), rgba(0, 121, 181, 1));
-  color: #fff;
+  color: #fff; 
+}
+.Home-Prize-Success,
+.Home-Prize-Fail {
+  transition-timing-function: step-end(5, end);
 }
 .Home-Prize-Success {
   background: linear-gradient(0deg, rgba(0, 10, 2, 0.9), rgb(57, 181, 0));
