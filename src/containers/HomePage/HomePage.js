@@ -36,7 +36,8 @@ class HomePage extends React.Component {
         >
           <div className="Page1">
             <img
-              src="https://markit.anz.com/uploads/144a4930128bca0c8536347ebb94701c/logo/small-logo-eb6fb5f143638db1e2b8e68eec525356.png" alt="ANZ"
+              src="https://markit.anz.com/uploads/144a4930128bca0c8536347ebb94701c/logo/small-logo-eb6fb5f143638db1e2b8e68eec525356.png"
+              alt="ANZ"
             />
             <h1>
               ANZ Finance Day
@@ -103,16 +104,18 @@ class HomePage extends React.Component {
           }
         >
           <div className="Page6">
-
-            <h1>Empty Slot!!</h1>
-            <h3>Try Your Luck at</h3>
-            <h3>Next Stall</h3>
+            <h1>Sorry!!</h1>
+            <h3>
+              Better luck at
+              <br />
+              Next Stall
+            </h3>
           </div>
         </div>
       </div>
     );
   }
-} 
+}
 
 /**
  * Confetti particle class
