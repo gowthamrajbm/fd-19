@@ -25,10 +25,9 @@ class PrizeForm extends React.Component {
           this.props.eid()
       )
       .then(res => {
-        if(res.data.success)
-          this.props.won();
-        else 
-          this.props.lost();
+        console.log(res);
+        if (res.data.success) this.props.won();
+        else this.props.lost();
       })
       .catch(err => {
         this.props.lost();
