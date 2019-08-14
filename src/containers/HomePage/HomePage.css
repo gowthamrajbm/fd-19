@@ -27,8 +27,8 @@
   transition-duration: 1s;
   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   overflow: hidden;
-  background: linear-gradient(0deg, rgba(0, 6, 10, 0.9), rgba(0, 121, 181, 1));
-  color: #fff; 
+  background: linear-gradient(0deg, rgba(0, 6, 10, 0.9), rgb(0, 121, 181));
+  color: #fff;
 }
 .Home-Prize-Success,
 .Home-Prize-Fail {
@@ -113,4 +113,14 @@
 }
 .player-wrap .player-toggle:hover {
   background-color: white;
+}
+img.logo {
+  width: 200px;
+}
+img.banner {
+  width: 90%;
+}
+img.moto {
+  width: 90%;
+  max-width: 90px;
 }
