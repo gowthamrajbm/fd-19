@@ -37,6 +37,9 @@ class PrizeForm extends React.Component {
   render() {
     return (
       <div>
+        <h3>
+          Spin the lucky wheel <br /> and win a Prize
+        </h3>
         {!this.state.submitted ? (
           <div className="text-cont">
             <input

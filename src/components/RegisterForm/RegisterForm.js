@@ -115,11 +115,7 @@ class RegisterForm extends React.Component {
 
     let footer = (
       <div className="MAF-Footer">
-        <Button
-          btntype="Classic Round"
-          type="submit"
-          disabled={this.state.formIsvalid}
-        >
+        <Button btntype="Classic Round" type="submit">
           REGISTER
         </Button>
       </div>

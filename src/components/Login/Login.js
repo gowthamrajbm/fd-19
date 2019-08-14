@@ -56,7 +56,7 @@ class Login extends React.Component {
           this.setState({
             loading: false
           });
-          this.props.success(3, eid);
+          this.props.success(3, eid, res.data.response);
         } else {
           this.setState({
             loading: false,
@@ -97,7 +97,7 @@ class Login extends React.Component {
           type="submit"
           disabled={!this.state.formIsvalid}
         >
-          Register
+          Check-In
         </Button>
       </div>
     );

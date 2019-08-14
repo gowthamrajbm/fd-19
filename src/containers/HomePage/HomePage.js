@@ -9,11 +9,12 @@ class HomePage extends React.Component {
   state = {
     page: 1,
     prize: null,
-    eid: null
+    eid: null,
+    name: null
   };
 
-  setPage = (page, eid = null) => {
-    this.setState({ page: page, eid: eid });
+  setPage = (page, eid = null, name = null) => {
+    this.setState({ page: page, eid: eid, name: name });
   };
 
   getEid = () => {
@@ -48,7 +49,7 @@ class HomePage extends React.Component {
               btntype="Classic Round"
               clicked={() => this.setState({ page: 2 })}
             >
-              Register
+              Check-In
             </Button>
           </div>
         </div>
@@ -58,7 +59,7 @@ class HomePage extends React.Component {
           }
         >
           <div className="Page2">
-            <h1>Register</h1>
+            <h1>Employee Check-In</h1>
             <Login success={this.setPage} />
           </div>
         </div>
@@ -68,7 +69,7 @@ class HomePage extends React.Component {
           }
         >
           <div className="Page3">
-            <h1>Thanks for Registering</h1>
+            <h1>{"Welcome" + this.state.name ? this.state.name : ""}</h1>
             <h3 style={{ fontWeight: "normal" }}>Kindly collect your Gift</h3>
             <Button
               btntype="Classic-i Round"
