@@ -69,7 +69,7 @@ class HomePage extends React.Component {
           }
         >
           <div className="Page3">
-            <h1>{"Welcome" + this.state.name ? this.state.name : ""}</h1>
+            <h1>{this.state.name ? "Welcome" + this.state.name : ""}</h1>
             <h3 style={{ fontWeight: "normal" }}>Kindly collect your Gift</h3>
             <Button
               btntype="Classic-i Round"
