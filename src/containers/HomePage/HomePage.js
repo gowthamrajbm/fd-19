@@ -5,6 +5,9 @@ import Button from "../../components/UI/Button/Button";
 import Login from "../../components/Login/Login";
 import PrizeForm from "../../components/PrizeForm/PrizeForm";
 
+import banner from "../../assets/fd19-banner.png";
+import moto from "../../assets/fd19-moto.png";
+
 class HomePage extends React.Component {
   state = {
     page: 1,
@@ -39,12 +42,27 @@ class HomePage extends React.Component {
             <img
               src="https://markit.anz.com/uploads/144a4930128bca0c8536347ebb94701c/logo/small-logo-eb6fb5f143638db1e2b8e68eec525356.png"
               alt="ANZ"
+              className="logo"
             />
-            <h1>
-              ANZ Finance Day
+            <img
+              className="banner"
+              src={banner}
+              alt="ANZ FINANCE CONFERENCE 2019"
+            />
+            /
+            <img
+              className="moto"
+              src={moto}
+              alt="ANZ FINANCE CONFERENCE 2019"
+            />
+            <br />
+            <b>
+              " Harnessing your Value
               <br />
-              2019
-            </h1>
+               in a changing environment "
+            </b>
+            <br />
+            <br />
             <Button
               btntype="Classic Round"
               clicked={() => this.setState({ page: 2 })}
@@ -69,7 +87,7 @@ class HomePage extends React.Component {
           }
         >
           <div className="Page3">
-            <h1>{this.state.name ? "Welcome" + this.state.name : ""}</h1>
+            <h1>{this.state.name ? "Welcome " + this.state.name : ""}</h1>
             <h3 style={{ fontWeight: "normal" }}>Kindly collect your Gift</h3>
             <Button
               btntype="Classic-i Round"
