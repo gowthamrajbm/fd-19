@@ -1,4 +1,8 @@
 .Page-Cont {
   height: 100vh;
-  /*background: linear-gradient(0deg, rgba(0, 30, 53, 0.9), rgba(0, 121, 181, 1));*/
+  background: linear-gradient(
+    0deg,
+    rgba(240, 240, 240, 0.9),
+    rgb(124, 208, 250, 1)
+  );
 }
