@@ -89,16 +89,10 @@ class HomePage extends React.Component {
           <div className="Page3">
             <h1>{this.state.name ? "Welcome " + this.state.name : ""}</h1>
             <h3 style={{ fontWeight: "normal" }}>Kindly collect your Gift</h3>
-            <Button
-              btntype="Classic-i Round"
-              clicked={() => this.setState({ page: 4 })}
-            >
-              Got It!
-            </Button>
           </div>
         </div>
         <div
-          className={this.state.page === 4 ? "Home-Prize active" : "Home-Prize"}
+          className={this.state.page === 5 ? "Home-Prize active" : "Home-Prize"}
         >
           <div className="Page4">
             <PrizeForm eid={this.getEid} won={this.won} lost={this.lost} />
