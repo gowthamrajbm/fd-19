@@ -5,6 +5,9 @@ import Button from "../../components/UI/Button/Button";
 import Login from "../../components/Login/Login";
 import PrizeForm from "../../components/PrizeForm/PrizeForm";
 
+import banner from "../../assets/fd19-banner.png";
+import moto from "../../assets/fd19-moto.png";
+
 class HomePage extends React.Component {
   state = {
     page: 1,
@@ -37,14 +40,30 @@ class HomePage extends React.Component {
         >
           <div className="Page1">
             <img
-              src="https://markit.anz.com/uploads/144a4930128bca0c8536347ebb94701c/logo/small-logo-eb6fb5f143638db1e2b8e68eec525356.png"
-              alt="ANZ"
+              className="banner"
+              src={banner}
+              alt="ANZ FINANCE CONFERENCE 2019"
             />
-            <h1>
-              ANZ Finance Day
+            <img
+              className="moto"
+              src={moto}
+              alt="ANZ FINANCE CONFERENCE 2019"
+            />
+            <br />
+            <br />
+            <b>**********</b>
+            <br />
+            <br />
+            <b>
+              Harnessing your Value
               <br />
-              2019
-            </h1>
+               in a changing environment
+            </b>
+            <br />
+            <br />
+            <b>**********</b>
+            <br />
+            <br />
             <Button
               btntype="Classic Round"
               clicked={() => this.setState({ page: 2 })}
@@ -59,7 +78,8 @@ class HomePage extends React.Component {
           }
         >
           <div className="Page2">
-            <h1>Employee Check-In</h1>
+            <h1>Check-In</h1>
+            <b>**********</b>
             <Login success={this.setPage} />
           </div>
         </div>
@@ -69,18 +89,12 @@ class HomePage extends React.Component {
           }
         >
           <div className="Page3">
-            <h1>{this.state.name ? "Welcome" + this.state.name : ""}</h1>
+            <h1>{this.state.name ? "Welcome " + this.state.name : ""}</h1>
             <h3 style={{ fontWeight: "normal" }}>Kindly collect your Gift</h3>
-            <Button
-              btntype="Classic-i Round"
-              clicked={() => this.setState({ page: 4 })}
-            >
-              Got It!
-            </Button>
           </div>
         </div>
         <div
-          className={this.state.page === 4 ? "Home-Prize active" : "Home-Prize"}
+          className={this.state.page === 5 ? "Home-Prize active" : "Home-Prize"}
         >
           <div className="Page4">
             <PrizeForm eid={this.getEid} won={this.won} lost={this.lost} />
