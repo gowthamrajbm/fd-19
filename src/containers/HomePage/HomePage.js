@@ -51,7 +51,7 @@ class HomePage extends React.Component {
             />
             <br />
             <br />
-            <b class="stars">**********</b>
+            <b class="stars">******</b>
             <br />
             <br />
             <b>
@@ -61,7 +61,7 @@ class HomePage extends React.Component {
             </b>
             <br />
             <br />
-            <b class="stars">**********</b>
+            <b class="stars">******</b>
             <br />
             <br />
             <Button
@@ -79,7 +79,8 @@ class HomePage extends React.Component {
         >
           <div className="Page2">
             <h1>Check-In</h1>
-            <b>**********</b>
+            <b>******</b>
+            <br />
             <Login success={this.setPage} />
           </div>
         </div>
@@ -89,8 +90,25 @@ class HomePage extends React.Component {
           }
         >
           <div className="Page3">
-            <h1>{this.state.name ? "Welcome " + this.state.name : ""}</h1>
-            <h3 style={{ fontWeight: "normal" }}>Kindly collect your Gift</h3>
+            <h1 style={{ marginBottom: "0px", fontSize: "22px" }}>
+              {this.state.name ? "Welcome" : ""}
+            </h1>
+            <h1 style={{ marginTop: "0px", fontWeight: "lighter" }}>
+              {this.state.name ? this.state.name : ""}
+            </h1>
+            <b>*******</b>
+            <h3
+              style={{
+                fontWeight: "bold",
+                padding: "15px",
+                border: "2px dashed #fff",
+                background: "#113d54",
+                fontSize: "16px",
+                textTransform: "uppercase"
+              }}
+            >
+              Kindly collect your Gift
+            </h3>
           </div>
         </div>
         <div
