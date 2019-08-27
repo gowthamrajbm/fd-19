@@ -51,7 +51,7 @@ class HomePage extends React.Component {
             />
             <br />
             <br />
-            <b>**********</b>
+            <b class="stars">**********</b>
             <br />
             <br />
             <b>
@@ -61,7 +61,7 @@ class HomePage extends React.Component {
             </b>
             <br />
             <br />
-            <b>**********</b>
+            <b class="stars">**********</b>
             <br />
             <br />
             <Button

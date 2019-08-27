@@ -30,11 +30,12 @@
   background: linear-gradient(0deg, rgba(0, 6, 10, 0.9), rgb(0, 121, 181));
   color: #fff;
 }
-.Home-Register h1{
+.Home-Register h1 {
   margin-bottom: 10px;
 }
+.Home-Intro b.stars,
 .Home-Register b {
-  color: #90A4AE;
+  color: #e91e63;
 }
 .Home-Prize-Success,
 .Home-Prize-Fail {
