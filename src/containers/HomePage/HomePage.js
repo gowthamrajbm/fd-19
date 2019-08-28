@@ -90,10 +90,22 @@ class HomePage extends React.Component {
           }
         >
           <div className="Page3">
-            <h1 style={{ marginBottom: "0px", fontSize: "22px" }}>
+            <h1
+              style={{
+                marginBottom: "0px",
+                fontSize: "22px",
+                textShadow: "0px 2px 6px #000"
+              }}
+            >
               {this.state.name ? "Welcome" : ""}
             </h1>
-            <h1 style={{ marginTop: "0px", fontWeight: "lighter" }}>
+            <h1
+              style={{
+                marginTop: "0px",
+                fontWeight: "lighter",
+                textShadow: "5px 5px 6px #000"
+              }}
+            >
               {this.state.name ? this.state.name : ""}
             </h1>
             <b>*******</b>
@@ -104,7 +116,8 @@ class HomePage extends React.Component {
                 border: "2px dashed #fff",
                 background: "#113d54",
                 fontSize: "16px",
-                textTransform: "uppercase"
+                textTransform: "uppercase",
+                borderRadius: "25px"
               }}
             >
               Kindly collect your Gift
