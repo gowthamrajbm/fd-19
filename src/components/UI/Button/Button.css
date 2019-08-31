@@ -34,6 +34,8 @@
 }
 .Action {
   padding: 8px 10px;
+  font-weight: 100;
+  box-shadow: 1px 1px 0px 0px #696969;
 }
 .Classic {
   background: #2196f3;
@@ -61,7 +63,7 @@
 }
 
 .Danger {
-  background: #f44336;
+  background: #e61000;
 }
 
 .Default {
