@@ -32,7 +32,9 @@
 .Success {
   background: #61bd4f;
 }
-
+.Action {
+  padding: 8px 10px;
+}
 .Classic {
   background: #2196f3;
 }
@@ -59,7 +61,7 @@
 }
 
 .Danger {
-  color: #944317;
+  background: #f44336;
 }
 
 .Default {

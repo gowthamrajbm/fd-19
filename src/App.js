@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import HomePage from "./containers/HomePage/HomePage";
 import Register from "./containers/Register/Register";
+import Status from "./containers/Status/Status";
 import HomeLayout from "./hoc/HomeLayout/HomeLayout";
 
 import "./App.css";
@@ -15,6 +16,7 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/register" exact component={Register} />
+          <Route path="/status" exact component={Status} />
         </Switch>
       </HomeLayout>
     );
