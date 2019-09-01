@@ -15,7 +15,30 @@ class Status extends React.Component {
     this.setState({ page: page });
   };
 
-  componentDidMount() {
+  toggleCheckin = id => {
+    axios
+      .get("/employee/toggleCheckin?eid=" + id)
+      .then(res => {
+        this.loadData();
+      })
+      .catch(err => {
+        alert("Error occurred. Try again.");
+      });
+  };
+
+  toggleGift = id => {
+    axios
+      .get("/employee/toggleGift?eid=" + id)
+      .then(res => {
+        this.loadData();
+      })
+      .catch(err => {
+        alert("Error occurred. Try again.");
+      });
+  };
+
+  loadData = () => {
+    this.setState({ data: null });
     axios
       .get("/employee/getAll")
       .then(res => {
@@ -23,9 +46,14 @@ class Status extends React.Component {
           this.setState({ data: res.data.response });
         } else {
           this.setState({ data: null });
+          this.loadData();
         }
       })
       .catch(err => {});
+  };
+
+  componentDidMount() {
+    this.loadData();
   }
 
   render() {
@@ -48,16 +76,36 @@ class Status extends React.Component {
               </td>
               <td>
                 {employee.logged_in ? (
-                  <Button btntype="Action Success">Check-In</Button>
+                  <Button
+                    btntype="Action Success"
+                    clicked={() => this.toggleCheckin(employee.eid)}
+                  >
+                    Check-In
+                  </Button>
                 ) : (
-                  <Button btntype="Action Danger">Unchecked</Button>
+                  <Button
+                    btntype="Action Danger"
+                    clicked={() => this.toggleCheckin(employee.eid)}
+                  >
+                    Unchecked
+                  </Button>
                 )}
               </td>
               <td>
                 {employee.gift ? (
-                  <Button btntype="Action Success">Received</Button>
+                  <Button
+                    btntype="Action Success"
+                    clicked={() => this.toggleGift(employee.eid)}
+                  >
+                    Received
+                  </Button>
                 ) : (
-                  <Button btntype="Action Danger">Not Received</Button>
+                  <Button
+                    btntype="Action Danger"
+                    clicked={() => this.toggleGift(employee.eid)}
+                  >
+                    Not Received
+                  </Button>
                 )}
               </td>
             </tr>
