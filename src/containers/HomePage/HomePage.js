@@ -295,10 +295,10 @@ class ConfettiParticle {
   });
 
   // start
-  updateSize();
+  //updateSize();
   //createParticles();
   //changeBgColor();
-  animationFunc();
+  //animationFunc();
 })();
 
 export default HomePage;
