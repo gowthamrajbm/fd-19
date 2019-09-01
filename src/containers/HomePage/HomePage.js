@@ -296,7 +296,7 @@ class ConfettiParticle {
 
   // start
   updateSize();
-  createParticles();
+  //createParticles();
   //changeBgColor();
   animationFunc();
 })();
