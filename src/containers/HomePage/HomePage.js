@@ -51,7 +51,7 @@ class HomePage extends React.Component {
             />
             <br />
             <br />
-            <b class="stars">******</b>
+            <b className="stars">******</b>
             <br />
             <br />
             <b>
@@ -61,7 +61,7 @@ class HomePage extends React.Component {
             </b>
             <br />
             <br />
-            <b class="stars">******</b>
+            <b className="stars">******</b>
             <br />
             <br />
             <Button
@@ -97,7 +97,7 @@ class HomePage extends React.Component {
                 textShadow: "0px 2px 6px #000"
               }}
             >
-              {this.state.name ? "Welcome" : ""}
+              {this.state.name ? "Welcome," : ""}
             </h1>
             <h1
               style={{
@@ -108,19 +108,32 @@ class HomePage extends React.Component {
             >
               {this.state.name ? this.state.name : ""}
             </h1>
-            <b>*******</b>
+            <br />
             <h3
               style={{
-                fontWeight: "bold",
                 padding: "15px",
                 border: "2px dashed #fff",
                 background: "#113d54",
-                fontSize: "16px",
+                fontSize: "14px",
                 textTransform: "uppercase",
-                borderRadius: "25px"
+                borderRadius: "25px",
+                lineHeight: "2"
               }}
             >
-              Kindly collect your Gift
+              <h1
+                style={{
+                  marginTop: "0px",
+                  fontSize: "15px",
+                  textTransform: "uppercase",
+                  textShadow: "0px 2px 6px #000",
+                  marginBottom: "5px"
+                }}
+              >
+                Thank You For Checking-In
+              </h1>
+              <span style={{ color: "aqua" }}>
+                Kindly collect your Gift at the venue
+              </span>
             </h3>
           </div>
         </div>
